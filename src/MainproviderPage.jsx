@@ -64,7 +64,7 @@ const MainproviderPage = () => {
       <section className="w-full p-5  flex-wrap lg:px-[100px]">
         <h1 className="text-3xl font-outfit font-semibold">Features</h1>
 
-        <div className="flex justify-around items-center w-full">
+        <div className="flex flex-col lg:flex lg:flex-row justify-around items-center w-full">
           {data?.map((d) => (
             <Card key={d.title} title={d.title} desc={d.desc} />
           ))}
