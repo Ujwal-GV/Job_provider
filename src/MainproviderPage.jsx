@@ -31,9 +31,6 @@ const MainproviderPage = () => {
           <span className="text-orange-600 font-semibold text-2xl md:text-4xl font-outfit">
             Emploez.in
           </span>
-          <span>
-            Hi
-          </span>
         </div>
 
         <button
