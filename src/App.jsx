@@ -5,7 +5,7 @@ import MainproviderPage from "./MainproviderPage";
 
 function App() {
 
-  const [openPage, setPageOpen] = useState(sessionStorage.getItem("showed") || false);
+  const [openPage, setPageOpen] = useState(false);
 
   const handlePageChange = () => {
     setPageOpen(true);
