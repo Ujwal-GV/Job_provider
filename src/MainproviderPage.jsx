@@ -92,7 +92,7 @@ const MainproviderPage = () => {
           <div className="mt-2 w-full flex flex-col justify-between items-center font-outfit ">
             <button className="text-[0.8rem] p-2 rounded-xl bg-orange-500 text-white w-full" onClick={handleSignUpClick}>Register</button>
              <div className="w-full flex justify-center items-center"><hr className="flex flex-1" /> <span className="text-[0.5rem]">OR</span> <hr className="flex flex-1 "/></div>
-            <button className="text-[0.8rem] p-2 rounded-xl bg-white text-orange-500 border border-orange-500 w-full" onClick={handleSignInClick}>SignUp</button>
+            <button className="text-[0.8rem] p-2 rounded-xl bg-white text-orange-500 border border-orange-500 w-full" onClick={handleSignInClick}>Login</button>
           </div>
         </div>
       </section>
