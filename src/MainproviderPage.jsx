@@ -36,11 +36,12 @@ const MainproviderPage = () => {
 
   return (
     <div className="min-h-[100vh] w-full bg-slate-50">
-      <div className="flex justify-between items-center p-3">
-        <div className="w-fit flex justify-center items-center gap-2">
-          <img src={logo} alt="" className="w-10 h-10 md:h-14 md:w-14" />
-          <span className="text-orange-600 font-semibold text-2xl md:text-4xl font-outfit">
-            Emploez.in
+      <div className="flex justify-between items-center p-3 bg-white">
+        <div className="w-fit flex justify-center items-center gap-2 p-2">
+          <img src={logo} alt="Logo" className="text-sm ml-0 lg:w-[3rem] w-[3rem]" />
+          <span className="mt-1 font-bold text-2xl md:text-3xl">
+          <span className="font-emploez text-orange-600">Emploez</span>
+          <span>.in</span>
           </span>
         </div>
 
