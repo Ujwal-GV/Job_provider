@@ -65,7 +65,7 @@ const MainproviderPage = () => {
           Idea's Into Innovation
         </h1>
 
-        <div className="w-[250px] absolute bottom-[10px] right-[5%]  bg-white rounded-xl border border-gray-200 p-2 shadow-sm shadow-gray-500">
+        <div className="w-[220px] md:w-[250px] absolute bottom-[10px] right-3 md:right-[5%]  bg-white rounded-xl border border-gray-200 p-2 shadow-sm shadow-gray-500">
           <h1 className="text-xl font-semibold font-outfit bg-blue-600 flex justify-center items-center text-white rounded-xl">
             Job Provider
             <span className="ms-1 text-[0.5rem] w-fit h-fit">Free</span>
@@ -89,7 +89,7 @@ const MainproviderPage = () => {
             </span>
           </div>
 
-          <div className="mt-2 w-full flex flex-col justify-between items-center ">
+          <div className="mt-2 w-full flex flex-col justify-between items-center font-outfit ">
             <button className="text-[0.8rem] p-2 rounded-xl bg-orange-500 text-white w-full" onClick={handleSignUpClick}>Register</button>
              <div className="w-full flex justify-center items-center"><hr className="flex flex-1" /> <span className="text-[0.5rem]">OR</span> <hr className="flex flex-1 "/></div>
             <button className="text-[0.8rem] p-2 rounded-xl bg-white text-orange-500 border border-orange-500 w-full" onClick={handleSignInClick}>SignUp</button>
