@@ -35,6 +35,7 @@ const MainproviderPage = () => {
   }
 
   return (
+    <>
     <div className="min-h-[100vh] w-full bg-slate-50">
       <div className="flex justify-between items-center p-3 bg-white">
         <div className="w-fit flex justify-center items-center gap-2 p-2">
@@ -108,6 +109,12 @@ const MainproviderPage = () => {
         </div>
       </section>
     </div>
+    <footer className="bg-orange-500 text-sm">
+        <div className="text-white text-center py-1">
+          <p className="p-4">&copy; {new Date().getFullYear()} Emploez.in. All rights reserved.</p>
+        </div>
+      </footer>
+    </>
   );
 };
 
