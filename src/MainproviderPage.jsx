@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
 import logo from "./assets/EmploezLogo.png";
 import { CiLogin } from "react-icons/ci";
-import img1 from "./assets/svg1.webp";
+import img1 from "./assets/svg1.png";
 import { BiSolidBadgeCheck } from "react-icons/bi";
+import { GiCheckMark } from "react-icons/gi";
 const MainproviderPage = () => {
   useEffect(() => {
     window.scroll(0, 0);
@@ -22,6 +23,16 @@ const MainproviderPage = () => {
       desc: "Track applications and manage your postings with ease, all from one intuitive dashboard.",
     },
   ];
+
+
+
+  const handleSignInClick=()=>{
+    window.open("https://jobs-frontend-gold.vercel.app/login")
+  }
+
+  const handleSignUpClick=()=>{
+    window.open("https://jobs-frontend-gold.vercel.app/signup")
+  }
 
   return (
     <div className="min-h-[100vh] w-full bg-slate-50">
@@ -45,18 +56,43 @@ const MainproviderPage = () => {
       </div>
 
       <section className="w-full h-[60vh] relative">
-        <img src={""} alt="" className="h-full w-full" />
-        <h1 className="text-3xl sm:text-3xl w-fit md:text-5xl absolute top-[10%] left-[50%] -translate-x-[50%] font-lilita text-nowrap">
+        <img
+          src={img1}
+          alt="Welcome"
+          className="h-full w-full md:w-[70%] lg:w-[40%] relative lg:translate-x-10"
+        />
+        <h1 className="text-3xl sm:text-3xl w-fit md:text-5xl absolute top-[5%] lg:top-[10%] left-[50%] -translate-x-[50%] font-lilita text-nowrap">
           Idea's Into Innovation
         </h1>
 
-        <div className="w-[150px] absolute bottom-[10px] right-[5%] rounded-xl">
+        <div className="w-[250px] absolute bottom-[10px] right-[5%]  bg-white rounded-xl border border-gray-200 p-2 shadow-sm shadow-gray-500">
           <h1 className="text-xl font-semibold font-outfit bg-blue-600 flex justify-center items-center text-white rounded-xl">
             Job Provider
             <span className="ms-1 text-[0.5rem] w-fit h-fit">Free</span>
           </h1>
-          <div>
+          <div className="flex flex-col justify-start items-start text-[0.7rem] font-outfit p-4">
+            <span className="flex justify-center items-start gap-[2px]">
+              <GiCheckMark className="text-green-500 " /> Unlimited Job Postings
+            </span>
+            <span className="flex justify-center items-center gap-[2px]">
+              <GiCheckMark className="text-green-500 " /> Application Tracking
+            </span>
+            <span className="flex justify-center items-center gap-[2px]">
+              <GiCheckMark className="text-green-500 " /> Seamless Notifications
+            </span>
+            <span className="flex justify-center items-center gap-[2px]">
+              <GiCheckMark className="text-green-500 " /> Advanced Filters
+            </span>
+            <span className="flex justify-center items-center gap-[2px]">
+              <GiCheckMark className="text-green-500 " /> User-Friendly
+              Dashboard
+            </span>
+          </div>
 
+          <div className="mt-2 w-full flex flex-col justify-between items-center ">
+            <button className="text-[0.8rem] p-2 rounded-xl bg-orange-500 text-white w-full" onClick={handleSignUpClick}>Register</button>
+             <div className="w-full flex justify-center items-center"><hr className="flex flex-1" /> <span className="text-[0.5rem]">OR</span> <hr className="flex flex-1 "/></div>
+            <button className="text-[0.8rem] p-2 rounded-xl bg-white text-orange-500 border border-orange-500 w-full" onClick={handleSignInClick}>SignUp</button>
           </div>
         </div>
       </section>
@@ -64,7 +100,7 @@ const MainproviderPage = () => {
       <section className="w-full p-5  flex-wrap lg:px-[100px]">
         <h1 className="text-3xl font-outfit font-semibold">Features</h1>
 
-        <div className="flex flex-col lg:flex lg:flex-row justify-around items-center w-full">
+        <div className="flex flex-wrap justify-around items-center w-full">
           {data?.map((d) => (
             <Card key={d.title} title={d.title} desc={d.desc} />
           ))}
@@ -78,7 +114,7 @@ export default MainproviderPage;
 
 const Card = ({ title = "", desc = "" }) => {
   return (
-    <div className="w-[350px] relative md:w-[300px] h-[150px] p-4 rounded-xl bg-white flex justify-center flex-col items-start font-outfit shadow-md shadow-slate-600 m-4">
+    <div className="w-[90%] relative md:w-[300px] h-[150px] p-4 rounded-xl bg-white flex justify-center flex-col items-start font-outfit shadow-md shadow-slate-600 m-4">
       <h1 className="text-[0.9rem] text-nowrap mb-1 font-semibold  flex justify-center items-center gap-1 ">
         <BiSolidBadgeCheck className="text-[0.9rem] text-green-600" /> {title}
       </h1>
