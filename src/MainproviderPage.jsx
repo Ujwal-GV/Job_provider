@@ -38,8 +38,8 @@ const MainproviderPage = () => {
     <div className="min-h-[100vh] w-full bg-slate-50">
       <div className="flex justify-between items-center p-3 bg-white">
         <div className="w-fit flex justify-center items-center gap-2 p-2">
-          <img src={logo} alt="Logo" className="text-sm ml-0 lg:w-[3rem] w-[3rem]" />
-          <span className="mt-1 font-bold text-2xl md:text-3xl">
+          <img src={logo} alt="Logo" className="text-sm -ml-2 lg:w-[3rem] w-[2.5rem]" />
+          <span className="mt-2 lg:mt-1 md:mt-1 font-bold text-2xl md:text-3xl">
           <span className="font-emploez text-orange-600">Emploez</span>
           <span>.in</span>
           </span>
