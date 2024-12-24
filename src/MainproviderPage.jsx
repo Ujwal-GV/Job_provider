@@ -4,6 +4,7 @@ import { CiLogin } from "react-icons/ci";
 import img1 from "./assets/svg1.png";
 import { BiSolidBadgeCheck } from "react-icons/bi";
 import { GiCheckMark } from "react-icons/gi";
+import { MdAdminPanelSettings } from "react-icons/md";
 const MainproviderPage = () => {
   useEffect(() => {
     window.scroll(0, 0);
@@ -22,6 +23,9 @@ const MainproviderPage = () => {
       title: "Real-Time Insights",
       desc: "Track applications and manage your postings with ease, all from one intuitive dashboard.",
     },
+    {
+      title: "Admin Panel"
+    }
   ];
 
 
@@ -110,10 +114,10 @@ const MainproviderPage = () => {
       </section>
     </div>
     <footer className="bg-orange-500 text-sm">
-        <div className="text-white text-center py-1">
-          <p className="p-4">&copy; {new Date().getFullYear()} Emploez.in. All rights reserved.</p>
-        </div>
-      </footer>
+      <div className="text-white text-center py-1">
+        <p className="p-4">&copy; {new Date().getFullYear()} Emploez.in. All rights reserved.</p>
+      </div>
+    </footer>
     </>
   );
 };
@@ -122,9 +126,20 @@ export default MainproviderPage;
 
 const Card = ({ title = "", desc = "" }) => {
   return (
-    <div className="w-[90%] relative md:w-[300px] h-[150px] p-4 rounded-xl bg-white flex justify-center flex-col items-start font-outfit shadow-md shadow-slate-600 m-4">
+    <div className={`w-[90%] relative md:w-[300px] h-[150px] p-4 rounded-xl bg-white flex justify-center flex-col items-start font-outfit shadow-md shadow-slate-600 m-4 ${title === "Admin Panel" ? "hover:bg-gray-200" : ""}`}>
       <h1 className="text-[0.9rem] text-nowrap mb-1 font-semibold  flex justify-center items-center gap-1 ">
-        <BiSolidBadgeCheck className="text-[0.9rem] text-green-600" /> {title}
+        {
+          title === "Admin Panel" ? 
+            <button
+              onClick={() => {window.open("https://jobs-frontend-gold.vercel.app/admin/login")}}
+              className="absolute left-[0rem] flex flex-col items-center center w-full text-center"
+            >
+              <MdAdminPanelSettings className="text-[5rem]" />
+              {title}
+            </button>
+          :
+          <><BiSolidBadgeCheck className="text-[0.9rem] text-green-600" /> {title}</>
+        }
       </h1>
       <div className="text-[0.8rem]">{desc}</div>
       <div className="absolute bottom-0 left-0 h-2 w-full bg-orange-500 rounded-br-xl rounded-bl-xl flex justify-center items-center"></div>
